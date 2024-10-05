@@ -1,14 +1,22 @@
 <template>
   <div id="app">
-
+    <NavBar></NavBar>
     <router-view/>
   </div>
 </template>
 
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+<script>
+import NavBar from './components/NavBar.vue';
+
+export default{
+  components:{
+    NavBar
   }
+}
+</script>
+
+<style>
+ #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif; 
+}
 </style>
