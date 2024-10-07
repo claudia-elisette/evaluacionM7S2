@@ -28,18 +28,23 @@ export default {
 <style scoped>
     nav{
         border: 2px solid gray;
-        padding: 1.25rem;
+        background-image: url("../assets/vinilos.jfif");
+        background-color: rgba(255,255,255,0.6);
+        background-blend-mode: lighten;
+
     }
     div{
-        background-color: gray;
+        
         text-align: center;
         padding: 40px 100px;
         
     }
     .link{
-        font-size: 1.5rem;
+        font-size: 3rem;
         font-weight: 600;
         text-decoration: none;
-        color: #2c3e50;
+        color: #000000;
+        padding: 10px;
+        border-radius: 5px;
     }
 </style>

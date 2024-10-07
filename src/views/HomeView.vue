@@ -2,9 +2,9 @@
   <div class="home">
     <h1>Categorías</h1>
     <div class="btnGroup">
-      <router-link to="/indie" tag="button">Indie</router-link>
-      <router-link to="/pop" tag="button">Pop</router-link>
-      <router-link to="/rock" tag="button">Rock</router-link>
+      <router-link to="/rap"><img src="../assets/rap.jpg" alt=""></router-link>
+      <router-link to="/pop"><img src="../assets/pop.png" alt=""></router-link>
+      <router-link to="/rock"><img src="../assets/rock.png" alt=""></router-link>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
   .home{
     width: 80%;
     margin: 0 auto;
-    margin-top: 1.875rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     row-gap: 1.25rem;
@@ -37,16 +37,16 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 20px;
-    column-gap: 15px;
+    column-gap: 30px;
   }
-  button{
-    width: 30%;
-    max-width: 300px;
-    min-width: 200px;
+  img{
+    width: 300px;
+    height: 300px;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: green;
+    background-color: rgb(50, 56, 56);
     color: white;
   }
+  
 </style>
