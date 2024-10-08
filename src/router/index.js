@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import RapView from '@/views/RapView.vue'
-import PopView from '@/views/PopView.vue'
-import RockView from '@/views/RockView.vue'
+import AlbumsView from '@/views/AlbumsView.vue'
 
 Vue.use(VueRouter)
 
@@ -16,17 +14,26 @@ const routes = [
   {
     path: '/rap',
     name: 'rap',
-    component: RapView
+    component: AlbumsView,
+    props:{
+      genre:"rap"
+    }
   },
   {
     path: '/pop',
     name: 'pop',
-    component: PopView
+    component: AlbumsView,
+    props:{
+      genre:"pop"
+    }
   },
   {
     path: '/rock',
     name: 'rock',
-    component: RockView
+    component: AlbumsView,
+    props:{
+      genre:"rock"
+    }
   },
   {
     path: '/about',

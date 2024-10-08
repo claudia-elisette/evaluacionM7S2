@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <h1>Pop</h1>
+        <h1>{{genre}}</h1>
         <div class="albums">
-            <AlbumCard v-for="album in pop" 
+            <AlbumCard v-for="album in albums" 
                         :key="album.id"
                         :id="album.id"
                         :artist="album.artist"
@@ -18,13 +18,23 @@
 import AlbumCard from '@/components/AlbumCard.vue';
 import { mapState } from 'vuex';
 export default {
-    name: 'pop-comp',
-    // props: {},
+    name: 'rap-comp',
+    props: {
+        genre:{
+            type:String,
+            Required:true
+        }
+    },
     data: function(){
         return {}
     },
     computed: {
-        ...mapState(['pop'])
+        //entrar prop a mapState
+        ...mapState({
+            albums(state){
+                return state[this.genre]
+            }
+        }) 
     },
     //methods: {}
     // watch: {},
