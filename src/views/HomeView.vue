@@ -1,21 +1,34 @@
 <template>
   <div class="home">
     <h1>Categorías</h1>
+    <h4>Número de albums: {{ totalAlbums }}</h4>
     <div class="btnGroup">
-      <router-link to="/rap"><img src="../assets/rap.jpg" alt=""></router-link>
-      <router-link to="/pop"><img src="../assets/pop.png" alt=""></router-link>
-      <router-link to="/rock"><img src="../assets/rock.png" alt=""></router-link>
+      <router-link to="/rap" class="link">
+        <img src="../assets/rap.jpg" alt="">
+        <span>{{ rapAlbums }}</span>
+      </router-link>
+      <router-link to="/pop" class="link">
+        <img src="../assets/pop.png" alt="">
+        <span>{{ popAlbums }}</span>
+      </router-link>
+      <router-link to="/rock" class="link">
+        <img src="../assets/rock.png" alt="">
+        <span>{{ rockAlbums }}</span>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import { mapGetters } from 'vuex';
 export default {
   name: 'HomeView',
+  computed:{
+    ...mapGetters(['totalAlbums', 'rapAlbums', 'popAlbums','rockAlbums'])
+  },
   components: {
-  }
+  },
 }
 </script>
 <style scoped>
@@ -25,11 +38,11 @@ export default {
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 1.25rem;
   }
   h1{
     font-size: 1.5rem;
-    margin: 0 auto;
   }
   .btnGroup{
     width: 100%;
@@ -38,6 +51,21 @@ export default {
     justify-content: center;
     row-gap: 20px;
     column-gap: 30px;
+  }
+  .link{
+    position: relative;
+  }
+  span{
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 800;
   }
   img{
     width: 300px;

@@ -121,8 +121,23 @@ export default new Vuex.Store({
      
   },
   getters: {
+    totalAlbums: state =>{
+      let totalAlbums = state.rap.length + state.pop.length + state.rock.length
+      return totalAlbums
+    },
+    rapAlbums: state =>{
+      return state.rap.length
+    },
+    popAlbums: state =>{
+      return state.pop.length
+    },
+    rockAlbums: state =>{
+      return state.rock.length
+    },
   },
   mutations: {
+
+
   },
   actions: {
   },

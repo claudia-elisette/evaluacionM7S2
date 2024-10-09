@@ -1,4 +1,4 @@
-# cue2
+# cue3
 
 ## Project setup
 ```
