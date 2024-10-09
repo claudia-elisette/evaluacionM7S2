@@ -79,7 +79,7 @@ export default {
 </script>
 
 <style scoped>
-.form{
+.container{
     margin-top: 50px;
     display: grid;
     grid-template-rows: max-content max-content;
