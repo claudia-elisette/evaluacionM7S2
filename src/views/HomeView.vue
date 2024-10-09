@@ -1,26 +1,31 @@
 <template>
-  <div class="home">
-    <h1>Categorías</h1>
-    <h4>Número de albums: {{ totalAlbums }}</h4>
-    <div class="btnGroup">
-      <router-link to="/rap" class="link">
-        <img src="../assets/rap.jpg" alt="">
-        <span>{{ rapAlbums }}</span>
-      </router-link>
-      <router-link to="/pop" class="link">
-        <img src="../assets/pop.png" alt="">
-        <span>{{ popAlbums }}</span>
-      </router-link>
-      <router-link to="/rock" class="link">
-        <img src="../assets/rock.png" alt="">
-        <span>{{ rockAlbums }}</span>
-      </router-link>
+  <div>
+    <div class="home">
+      <h1>Categorías</h1>
+      <h4>Número de albums: {{ totalAlbums }}</h4>
+      <div class="btnGroup">
+        <router-link to="/rap" class="link">
+          <img src="../assets/rap.jpg" alt="">
+          <span>{{ rapAlbums }}</span>
+        </router-link>
+        <router-link to="/pop" class="link">
+          <img src="../assets/pop.png" alt="">
+          <span>{{ popAlbums }}</span>
+        </router-link>
+        <router-link to="/rock" class="link">
+          <img src="../assets/rock.png" alt="">
+          <span>{{ rockAlbums }}</span>
+        </router-link>
+      </div>
     </div>
+    <NewAlbum></NewAlbum>
   </div>
+  
 </template>
 
 <script>
 // @ is an alias to /src
+import NewAlbum from '@/components/NewAlbum.vue';
 import { mapGetters } from 'vuex';
 export default {
   name: 'HomeView',
@@ -28,6 +33,7 @@ export default {
     ...mapGetters(['totalAlbums', 'rapAlbums', 'popAlbums','rockAlbums'])
   },
   components: {
+    NewAlbum
   },
 }
 </script>
@@ -76,5 +82,4 @@ export default {
     background-color: rgb(50, 56, 56);
     color: white;
   }
-  
 </style>

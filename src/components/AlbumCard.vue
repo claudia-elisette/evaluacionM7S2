@@ -13,7 +13,7 @@ export default {
     name: 'component-name',
     props: {
         id:{
-            type:String,
+            type:Number,
             Required:true
         },
         artist:{

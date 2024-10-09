@@ -136,7 +136,21 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    ADD_ALBUM: (state,album)=>{
+      album.id = Math.floor(Math.random()*1000)
 
+      let genre = album.category
+      if(genre=="rap"){
+        state.rap.push(album)
+      }
+      if(genre=="pop"){
+        state.pop.push(album)
+      }
+      if(genre=="rock"){
+        state.rock.push(album)
+      }
+      
+    }
 
   },
   actions: {
